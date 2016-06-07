@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.mingsoft.basic.dao.IBasicLogDao">
+	<cache />
+	<!-- 字段绑定 开始 -->
+	<resultMap type="com.mingsoft.basic.entity.BasicLogEntity"
+		id="resultMap">
+		<id column="bl_id" property="basicLogId" />
+		<result column="bl_datetime" property="basicLogDatetime" />
+		<result column="bl_basic_id" property="basicLogBasicId" />
+		<result column="bl_ip" property="basicLogIp" />
+		<result column="bl_app_id" property="basicLogAppId" />
+		<result column="bl_is_mobile" property="basicLogIsMobile" />
+	</resultMap>
+	<!-- 字段绑定结束 -->
+
+	<!-- 添加website信息开始 -->
+	<insert id="saveEntity" parameterType="com.mingsoft.base.entity.BaseEntity">
+		insert into basic_log
+
+		<trim prefix="(" suffix=")" suffixOverrides=",">
+			<if test="basicLogDatetime != null">bl_datetime,</if>
+			<if test="basicLogBasicId != null">bl_basic_id,</if>
+			<if test="basicLogIp != null">bl_ip,</if>
+			<if test="basicLogIsMobile != null">bl_is_mobile</if>
+		</trim>
+
+		<trim prefix="values (" suffix=")" suffixOverrides=",">
+			<if test="basicLogDatetime !=  null">#{basicLogDatetime},</if>
+			<if test="basicLogBasicId != null">#{basicLogBasicId},</if>
+			<if test="basicLogIp != null">#{basicLogIp},</if>
+			<if test="basicLogIsMobile != null">#{basicLogIsMobile},</if>
+		</trim>
+
+	</insert>
+
+	<select id="queryByPage" resultMap="resultMap">
+		select * from basic_log
+		bl_id
+		desc limit ${pageNo*pageSize},#{pageSize}
+	</select>
+
+	<select id="queryCount" resultType="int">
+		select count(bl_id) from
+		basic_log
+	</select>
+
+	<select id="query" resultMap="resultMap">
+		select * from basic_log
+		<if test="basicLog != null">
+			<if test="basicLog.basicLogIp != null">
+				and bl_ip = #{basicLog.basicLogIp}
+			</if>
+
+			<if test="basicLog.basicLogBasicId != null">
+				and bl_basic_id = #{basicLog.basicLogBasicId}
+			</if>
+		</if>
+		order by
+		bl_id desc limit ${pageNo*pageSize},#{pageSize}
+	</select>
+
+	<select id="count" resultType="int">
+		select count(bl_id) from basic_log
+		<where>
+			<if test="basicLog != null">
+				<if test="basicLog.basicLogIp != null">
+					and bl_ip = #{basicLog.basicLogIp}
+				</if>
+
+				<if test="basicLog.basicLogBasicId != null">
+					and bl_basic_id = #{basicLog.basicLogBasicId}
+				</if>
+			</if>
+		</where>
+	</select>
+
+</mapper>

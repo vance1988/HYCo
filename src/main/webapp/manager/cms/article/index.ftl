@@ -17,7 +17,7 @@
 	</@ms.contentMenu>
 	<@ms.contentBody width="85%" style="overflow-y: hidden;">
 		<@ms.contentPanel  style="margin:0;padding:0;overflow-y: hidden;">
-		<iframe src="${base}${baseManager}/cms/article/0/list.do" style="width:100%;maring:0;padding:0;border:none;height:100%;background-image: url(${static}/skin/manager/4.5.5/images/loading.gif);  background-repeat: no-repeat;  background-position: center;" id="listFrame" target="listFrame" ></iframe>
+		<iframe src="${base}${baseManager}/cms/article/0/list.do" style="width:100%;maring:0;padding:0;border:none;height:100%;background-image: url(${static}/skin/manager/${manager_ui}/images/loading.gif);  background-repeat: no-repeat;  background-position: center;" id="listFrame" target="listFrame" ></iframe>
 		</@ms.contentPanel>
 	</@ms.contentBody>
 </@ms.content>

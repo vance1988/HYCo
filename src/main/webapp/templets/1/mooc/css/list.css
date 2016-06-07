@@ -3750,8 +3750,8 @@ textarea.form-control {
 	margin-top: 15px;
 	margin-bottom: 15px;
 	float: left;
-	width: 290px;
-	background:url(../images/logo.jpg) no-repeat;
+	width: 300px;
+	background:url(../images/logo.png) no-repeat;
   height: 50px;
 }
 .navbar-form {

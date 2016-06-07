@@ -711,7 +711,7 @@ td.visible-print, th.visible-print {
 }
 .course_list.card_list li {
 	margin: 0 26px 20px 0;
-	min-height: 300px
+	min-height: 175px
 }
 .course_list.card_list li .course-info:nth-child(odd) {
 	position: static
