@@ -150,8 +150,10 @@ public class LoginAction extends BaseAction {
 		AppEntity urlWebsite = null;
 		urlWebsite = appBiz.getByUrl(this.getDomain(request)); // 根据url地址获取站点信息，主要是区分管理员对那些网站有权限
 		if (urlWebsite == null) {
-			this.outJson(response, ModelCode.ADMIN_LOGIN, false, this.getResString("err.not.exist",this.getResString("app")));
-			return;
+			//this.outJson(response, ModelCode.ADMIN_LOGIN, false, this.getResString("err.not.exist",this.getResString("app")));
+			//return;
+			//sun.ao 如果没找到就默认第一个 2016.06.07
+			urlWebsite = (AppEntity) appBiz.getEntity(1);
 		}
 		// 根据账号获取当前管理员信息
 		ManagerEntity _manager = managerBiz.queryManagerByManagerName(manager.getManagerName());

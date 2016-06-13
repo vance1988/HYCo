@@ -236,7 +236,8 @@ public abstract class BaseAction extends com.mingsoft.base.action.BaseAction {
 		IAppBiz appBiz = (IAppBiz) getBean(request.getServletContext(), "appBiz");
 		AppEntity website = appBiz.getByUrl(this.getDomain(request));
 		if (website == null) {
-			return null;
+			//return null;  sun.ao 如果没找到就默认第一个 2016.06.07
+			website = (AppEntity) appBiz.getEntity(1);
 		}
 		BeanUtils.copyProperties(website, app);
 		return app;

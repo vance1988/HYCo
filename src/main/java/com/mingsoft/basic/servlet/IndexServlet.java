@@ -62,19 +62,22 @@ public class IndexServlet extends BaseServlet {
 
 		appBiz = (IAppBiz) getBean(request.getServletContext(), "appBiz");
 		// 查询数据库获取域名对应Id
-		int websiteId = 0;
+		int websiteId = 1;
 		AppEntity website = appBiz.getByUrl(getDomain(request));
 		if (website != null) {
 			websiteId = website.getAppId();
 		} else {
-			this.outString(response, this.getResString("err.not.exist",this.getDomain(request)));
-			return;
+			//this.outString(response, this.getResString("err.not.exist",this.getDomain(request)));
+			//return;
+			website = (AppEntity) appBiz.getEntity(1);
 		}
 		String path = "";
 
+		//sun.ao 手机电脑一致 20160613
+		/*
 		if (!StringUtil.isBlank(website.getAppMobileStyle())) {
 			path = isMobileDevice(request) ? IParserRegexConstant.MOBILE : ""; // 如果是手机访问就跳转到相应页面
-		}
+		}*/
 
 		String defaultHtmlPath = this.getRealPath(request, IParserRegexConstant.HTML_SAVE_PATH + File.separator
 				+ websiteId + File.separator + path + File.separator + "default.html");
