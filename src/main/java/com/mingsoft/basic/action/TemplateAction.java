@@ -115,7 +115,7 @@ public class TemplateAction extends BaseAction {
 	@RequestMapping("/queryAppTemplateSkin")
 	@ResponseBody
 	public Map queryAppTemplateSkin(HttpServletRequest request){
-		List<String> folderNameList = (List<String>) this.queryTemplateFile( request);
+		List<String> folderNameList = (List<String>) this.queryTemplateFile(request);
 		Map map = new HashMap();
 		if(!StringUtil.isBlank(folderNameList)){
 			map.put("fileName", folderNameList);
@@ -387,7 +387,7 @@ public class TemplateAction extends BaseAction {
 	private List<String> queryTemplateFile(HttpServletRequest request){
 		ManagerSessionEntity managerSession = getManagerBySession(request);
 		List<String> folderNameList = null;
-		if (!isSystemManager(request)) {
+		if (isSystemManager(request)) {//sun.ao 如果是系统管理员则显示样式 20160613
 			String templets = this.getRealPath(request, IParserRegexConstant.REGEX_SAVE_TEMPLATE + File.separator + managerSession.getBasicId() + File.separator);
 			File file = new File(templets);
 			String[] str = file.list();

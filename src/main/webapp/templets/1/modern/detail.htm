@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="zh">
+{ms:include filename=head.htm/} 
+<body>
+{ms:include filename=nav.htm/} 
+
+    <!-- Page Content -->
+    <div class="container">
+
+        <!-- Page Heading/Breadcrumbs -->
+        <div class="row">
+            <div class="col-lg-12">
+                <h1 class="page-header">{ms:field.title/}
+                </h1>
+                <ol class="breadcrumb">
+                    <li><a href="{ms:global.url/}">首页</a>
+                    </li>
+                    <li class="active">{ms:field.title/}</li>
+                </ol>
+            </div>
+        </div>
+        <!-- /.row -->
+
+        <!-- Content Row -->
+        <div class="row">
+            <div class="col-lg-12">
+            	{ms:field.content/}
+            </div>
+        </div>
+        <!-- /.row -->
+
+        <hr>
+
+        {ms:include filename=footer.htm/}
+
+    </div>
+    <!-- /.container -->
+
+</body>
+
+</html>

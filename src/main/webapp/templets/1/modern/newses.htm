@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="zh">
+{ms:include filename=head.htm/} 
+<body>
+{ms:include filename=nav.htm/} 
+
+    <!-- Page Content -->
+    <div class="container">
+
+        <div class="row">
+            <div class="col-lg-12">
+                <h1 class="page-header">新闻中心
+                </h1>
+                <ol class="breadcrumb">
+                    <li><a href="{ms:global.url/}">首页</a>
+                    </li>
+                    <li class="active">新闻中心</li>
+                </ol>
+            </div>
+        </div>
+        <!-- /.row -->
+
+        <!-- Blog Post Row -->
+        {ms:arclist size=5 ispaging=true}
+        <div class="row">
+            <div class="col-md-1 text-center">
+                <p><i class="fa fa-newspaper-o  fa-4x"></i>
+                </p>
+                <p><small>[field.date fmt=yyyy-MM-dd/]</small></p>
+            </div>
+            <div class="col-md-5">
+                <a href="[field.link/]">
+                	<!-- 600x300 -->
+                    <img class="img-responsive img-hover" src="{ms:global.host/}[field.litpic/]" alt="">
+                </a>
+            </div>
+            <div class="col-md-6">
+                <h3>
+                    <a href="[field.link/]">[field.title/]</a>
+                </h3>
+                <p> [field.author/]
+                </p>
+                <p>[field.descrip/]</p>
+                <a class="btn btn-primary" href="[field.link/]">查看详情 <i class="fa fa-angle-right"></i></a>
+            </div>
+        </div>
+        <!-- /.row -->
+        
+        <hr>
+        {/ms:arclist}
+
+        <!-- Pager -->
+        <div class="row">
+            <ul class="pager">
+                <li class="previous"><a href="{ms:page.pre/}">&larr; 上一页</a>
+                </li>
+                <li class="next"><a href="{ms:page.next/}">下一页 &rarr;</a>
+                </li>
+            </ul>
+        </div>
+        <!-- /.row -->
+
+        <hr>
+
+        {ms:include filename=footer.htm/}
+
+    </div>
+    <!-- /.container -->
+
+</body>
+
+</html>

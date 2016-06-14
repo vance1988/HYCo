@@ -8,29 +8,27 @@
     <script type="text/javascript" src="{ms:globalskin.url/}/js/jquery-1.9.1.min.js"></script>
     <script src="{ms:globalskin.url/}/js/base.js" type="text/javascript"></script>
     <script src="{ms:globalskin.url/}/js/user.js" type="text/javascript"></script>
+    <script src="{ms:global.host/}/plugins/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <script src="{ms:global.host/}/plugins/slider/js/slider.js"></script>
+    <link href="{ms:global.host/}/plugins/slider/css/slide.css" rel="stylesheet">
 </head>
 <body>
     {ms:include filename=header.htm/} 
+    <div id="banner_tabs" class="flexslider">
+        <ul class="slides">
+        	{ms:arclist  typeid=1 size=5 flag=f}
+	        <li style="position: absolute; left: 0px; top: 0px; display: none; background: url({ms:global.host/}[field.litpic/]) 50% 50% no-repeat;">
+                <p class="banner_tit animated fadeInLeft"></p>
+                <p class="banner_des animated fadeInRight"></p>
+            </li>
+	        {/ms:arclist}
+        </ul>
+        <ul class="flex-direction-nav">
+            <li><a class="flex-prev" href="javascript:;">Previous</a></li>
+            <li><a class="flex-next" href="javascript:;">Next</a></li>
+        </ul>
+    </div>
     <div>
-       <div class="carousel-container">
-        	<div class="carousel" id="carousel">
-	            <ul>
-	            	{ms:arclist  typeid=1 size=5 flag=f}
-	            	<a data-carousel="[field.index/]" href="javascript:void(0);"   target="_blank">
-	                	<li style="background:url({ms:global.host/}[field.litpic/]) no-repeat center;"></li>	                
-	                </a>
-	                {/ms:arclist}
-	            </ul>        
-        	</div>
-        	<div class="control">
-		       	<ul>
-		       		{ms:arclist typeid=1 size=5 flag=f}
-	            	<li data-carousel="[field.index/]" class="[field.index/]"></li>
-	                {/ms:arclist}
-			    </ul>
-    		</div>
-    	</div>
-    	
     	<h3 class="title-b">新闻动态</h3>    
         <div class="list_wrap zone">
             <ul class="zone_list slider">

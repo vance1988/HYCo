@@ -123,9 +123,9 @@ public class AppAction extends BaseAction {
 		if (!this.isSystemManager(request)) {
 			app.setAppPayDate(null);
 			app.setAppPay(null);
-			// 设置当前的站点id
-			app.setAppId(this.getAppId(request));
 		}
+		// 设置当前的站点id  sun.ao 20160613
+		app.setAppId(this.getAppId(request));
 		int managerRoleID = managerSession.getManagerRoleID();
 		// 判断站点数据的合法性
 		// 获取cookie
