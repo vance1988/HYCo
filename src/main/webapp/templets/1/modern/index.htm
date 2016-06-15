@@ -6,6 +6,13 @@
     <!-- Header Carousel -->
     <header id="myCarousel" class="carousel slide">
 
+		<!-- Indicators -->
+        <ol class="carousel-indicators">
+        	{ms:arclist  typeid=1 size=5 flag=f}
+            <li data-target="#myCarousel" data-slide-to="[field.index/]"></li>
+            {/ms:arclist}
+        </ol>
+        
         <!-- Wrapper for slides -->
         <div class="carousel-inner">
         	{ms:arclist  typeid=1 size=5 flag=f}
@@ -115,8 +122,8 @@
 			{ms:arclist typeid=7}
             <div class="col-sm-2 col-xs-6">
             	<div class="panel panel-default">
-	                <a href="[field.descrip/]">
-	                	<!-- 500x300 -->
+	                <a href="[field.descrip/]" target="_blank">
+	                	<!-- 500x175 -->
 	                    <img class="img-responsive img-hover img-related" src="{ms:global.host/}[field.litpic/]" alt="">
 	                </a>
 	            </div>
@@ -134,6 +141,7 @@
 
     <!-- Script to Activate the Carousel -->
     <script>
+    $("#myCarousel ol.carousel-indicators li").first().addClass("active");
     $("#myCarousel div.carousel-inner div.item").first().addClass("active");
     $('.carousel').carousel({
         interval: 5000 //changes the speed
