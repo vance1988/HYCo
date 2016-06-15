@@ -1,8 +1,8 @@
--- MySQL dump 10.13  Distrib 5.5.38, for Linux (x86_64)
+-- MySQL dump 10.13  Distrib 5.7.11, for osx10.11 (x86_64)
 --
--- Host: localhost    Database: heyueit
+-- Host: localhost    Database: hy
 -- ------------------------------------------------------
--- Server version	5.5.38
+-- Server version	5.7.11
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
@@ -48,7 +48,7 @@ CREATE TABLE `app` (
 
 LOCK TABLES `app` WRITE;
 /*!40000 ALTER TABLE `app` DISABLE KEYS */;
-INSERT INTO `app` VALUES (1,'杭州和越科技有限公司','http://121.40.87.175:8080','/upload/app/1/hy_banner.png','杭州和越','Copyright @2016 杭州和越科技有限公司 版权所有','mooc',1,'杭州和越科技有限公司','2016-05-26 14:47:56','m',NULL,'',0,0);
+INSERT INTO `app` VALUES (1,'XXXX科技有限公司','http://localhost:8080/hy\r\n','/upload/app/1/logo.png','','Copyright &copy;2016 XXXX科技有限公司 版权所有','modern',1,'此模块域名比较关键，建议使用实际的域名（本地测试可以使用127.0.0.1或者localhost）,目前有两套样式，建议采用modern','2016-05-26 14:47:56','',NULL,'',0,0);
 /*!40000 ALTER TABLE `app` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -79,7 +79,7 @@ CREATE TABLE `basic` (
   KEY `BASIC_MODELID` (`BASIC_MODELID`) USING BTREE,
   KEY `BASIC_CATEGORYID` (`BASIC_CATEGORYID`) USING BTREE,
   KEY `BASIC_DATETIME` (`BASIC_DATETIME`) USING BTREE
-) ENGINE=InnoDB AUTO_INCREMENT=21 DEFAULT CHARSET=utf8 COMMENT='基础表';
+) ENGINE=InnoDB AUTO_INCREMENT=23 DEFAULT CHARSET=utf8 COMMENT='基础表';
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -88,7 +88,7 @@ CREATE TABLE `basic` (
 
 LOCK TABLES `basic` WRITE;
 /*!40000 ALTER TABLE `basic` DISABLE KEYS */;
-INSERT INTO `basic` VALUES (1,'互联网','','/upload/article/1/1464325065975.jpg',0,1,'2016-05-27 12:58:45','2016-05-30 14:34:43',0,1,0,3),(2,'微信','','/upload/article/1/1464325161513.jpg',0,2,'2016-05-27 12:59:23','2016-05-27 12:59:23',0,1,0,3),(3,'产品','','/upload/article/1/1464325209508.jpg',0,3,'2016-05-27 13:00:21','2016-05-27 13:00:21',0,1,0,3),(4,'关于我们','公司名称：杭州和越科技有限公司','',0,0,'2016-05-30 11:40:20','2016-05-30 11:40:20',0,2,0,3),(8,'联系我们','','',0,0,'2016-05-30 11:53:02','2016-05-30 15:12:56',0,5,0,3),(9,'什么是 Java？','Java 是一项用于开发应用程序的技术','/upload/article/1/1464580864414.jpg',0,0,'2016-05-30 12:02:06','2016-05-30 12:02:06',0,6,0,3),(10,'Android','','/upload/article/1/1464583146743.jpg',0,0,'2016-05-30 12:39:27','2016-05-30 12:39:27',0,6,0,0),(11,'iOS','','/upload/article/1/1464583513687.jpg',0,0,'2016-05-30 12:45:32','2016-05-30 12:45:32',0,6,0,3),(12,'服务','','',0,0,'2016-05-30 14:34:19','2016-05-30 14:34:19',0,3,0,3),(13,'人事工作系统','','/upload/article/1/1464590103664.png',0,0,'2016-05-30 14:35:38','2016-05-30 14:35:38',0,4,0,3),(14,'家宽辅助平台','','/upload/article/1/1464590164683.png',0,0,'2016-05-30 14:36:22','2016-05-30 14:36:22',0,4,0,3),(15,'内控平台','','/upload/article/1/1464590195271.png',0,0,'2016-05-30 14:36:54','2016-05-30 14:36:54',0,4,0,3),(16,'代维材料管理平台','','/upload/article/1/1464590242727.png',0,0,'2016-05-30 14:37:52','2016-05-30 14:37:52',0,4,0,3),(17,'家宽装维管理平台','','/upload/article/1/1464590298944.png',0,0,'2016-05-30 14:38:39','2016-05-30 14:38:39',0,4,0,3),(18,'装维管理平台','','/upload/article/1/1464590336800.png',0,0,'2016-05-30 14:39:16','2016-05-30 14:39:16',0,4,0,3),(19,'阿里云','','/upload/article/1/1464592649657.jpg',0,0,'2016-05-30 15:17:33','2016-05-30 15:17:33',0,7,0,3),(20,'铭飞MS平台','','/upload/article/1/1464592760653.png',0,0,'2016-05-30 15:19:22','2016-05-30 15:19:22',0,7,0,3);
+INSERT INTO `basic` VALUES (1,'首页轮播图片样例一','此条目不需要设置任何东西，只需要配置图片即可，图片大小1900x1080','/upload/article/1/huandeng_demo1.png',0,1,'2016-05-27 12:58:45','2016-06-15 19:47:02',0,1,0,3),(2,'首页轮播图片样例二','此条目不需要设置任何东西，只需要配置图片即可，图片大小1900x1080','/upload/article/1/huandeng_demo2.png',0,2,'2016-05-27 12:59:23','2016-06-15 19:46:57',0,1,0,3),(3,'首页轮播图片样例三','此条目不需要设置任何东西，只需要配置图片即可，图片大小1900x1080','/upload/article/1/huandeng_demo3.png',0,3,'2016-05-27 13:00:21','2016-06-15 19:47:08',0,1,0,3),(4,'关于我们','此处文字对应首页公司简介，可以适当的添加对应的html标签，使用全角空格可以达到缩进效果','/upload/article/1/guanyuwomen_demo.png',0,0,'2016-05-30 11:40:20','2016-06-15 19:10:39',0,2,0,3),(8,'联系我们','','',0,0,'2016-05-30 11:53:02','2016-06-15 19:20:09',0,5,0,3),(9,'新闻一标题','此处会显示新闻一的简介到首页','/upload/article/1/xinwen_demo1.png',0,0,'2016-05-30 12:02:06','2016-06-15 19:22:13',0,6,0,3),(10,'新闻二标题','此处会显示新闻二的简介到首页','/upload/article/1/xinwen_demo2.png',0,0,'2016-05-30 12:39:27','2016-06-15 19:23:26',0,6,0,0),(11,'新闻三标题','此处会显示新闻三的简介到首页','/upload/article/1/xinwen_demo3.png',0,0,'2016-05-30 12:45:32','2016-06-15 19:24:27',0,6,0,3),(12,'服务和管理','','',0,0,'2016-05-30 14:34:19','2016-06-15 19:11:36',0,3,0,3),(13,'产品一','产品一的简要描述，会在产品列表页面展示','/upload/article/1/chanpin_demo1.png',0,0,'2016-05-30 14:35:38','2016-06-15 19:19:25',0,4,0,3),(14,'产品二','产品二的简要描述，会在产品列表页面展示','/upload/article/1/chanpin_demo2.png',0,0,'2016-05-30 14:36:22','2016-06-15 19:19:18',0,4,0,3),(15,'产品三','产品三的简要描述，会在产品列表页面展示','/upload/article/1/chanpin_demo3.png',0,0,'2016-05-30 14:36:54','2016-06-15 19:19:13',0,4,0,3),(16,'产品四','产品四的简要描述，会在产品列表页面展示','/upload/article/1/chanpin_demo4.png',0,0,'2016-05-30 14:37:52','2016-06-15 19:19:10',0,4,0,3),(17,'产品五','产品五的简要描述，会在产品列表页面展示','/upload/article/1/chanpin_demo5.png',0,0,'2016-05-30 14:38:39','2016-06-15 19:19:03',0,4,0,3),(18,'产品六','产品六的简要描述，会在产品列表页面展示','/upload/article/1/chanpin_demo6.png',0,0,'2016-05-30 14:39:16','2016-06-15 19:18:57',0,4,0,3),(19,'友情链接一','http://sun-ao.github.io','/upload/article/1/lianjie_demo1.png',0,0,'2016-05-30 15:17:33','2016-06-15 19:32:18',0,7,0,3),(20,'友情链接二','http://ms.mingsoft.net/','/upload/article/1/lianjie_demo2.png',0,0,'2016-05-30 15:19:22','2016-06-15 19:26:52',0,7,0,3),(21,'成员姓名','','/upload/article/1/chengyuan.png',0,0,'2016-06-15 19:28:17','2016-06-15 20:03:17',0,8,0,3),(22,'伙伴样式','','/upload/article/1/huoban.png',0,0,'2016-06-15 19:28:33','2016-06-15 20:02:43',0,9,0,3);
 /*!40000 ALTER TABLE `basic` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -172,7 +172,7 @@ CREATE TABLE `category` (
   KEY `CATEGORY_MANAGERID` (`CATEGORY_MANAGERID`),
   KEY `CATEGORY_MODELID` (`CATEGORY_MODELID`),
   KEY `CATEGORY_CATEGORYID` (`CATEGORY_CATEGORYID`)
-) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8 COMMENT='分类表';
+) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=utf8 COMMENT='分类表';
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -181,7 +181,7 @@ CREATE TABLE `category` (
 
 LOCK TABLES `category` WRITE;
 /*!40000 ALTER TABLE `category` DISABLE KEYS */;
-INSERT INTO `category` VALUES (1,'首页幻灯',0,'2016-05-27 12:51:40',1,2,0,NULL,1,NULL),(2,'关于我们',0,'2016-05-27 13:49:23',1,2,0,NULL,1,NULL),(3,'服务',0,'2016-05-27 13:49:50',1,2,0,NULL,1,NULL),(4,'案例',0,'2016-05-27 13:50:22',1,2,0,NULL,1,NULL),(5,'联系我们',0,'2016-05-27 13:50:40',1,2,0,NULL,1,NULL),(6,'新闻动态',0,'2016-05-27 13:52:10',1,2,0,NULL,1,NULL),(7,'友情链接',0,'2016-05-27 13:52:45',1,2,0,NULL,1,NULL);
+INSERT INTO `category` VALUES (1,'首页幻灯',0,'2016-05-27 12:51:40',1,2,0,NULL,1,NULL),(2,'关于我们',0,'2016-05-27 13:49:23',1,2,0,NULL,1,NULL),(3,'服务和管理',0,'2016-05-27 13:49:50',1,2,0,NULL,1,NULL),(4,'产品和解决方案',0,'2016-05-27 13:50:22',1,2,0,NULL,1,NULL),(5,'联系我们',0,'2016-05-27 13:50:40',1,2,0,NULL,1,NULL),(6,'新闻中心',0,'2016-05-27 13:52:10',1,2,0,NULL,1,NULL),(7,'友情链接',0,'2016-05-27 13:52:45',1,2,0,NULL,1,NULL),(8,'团队',0,'2016-06-15 15:41:12',1,2,0,NULL,1,NULL),(9,'伙伴',0,'2016-06-15 15:41:54',1,2,0,NULL,1,NULL);
 /*!40000 ALTER TABLE `category` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -213,7 +213,7 @@ CREATE TABLE `cms_article` (
 
 LOCK TABLES `cms_article` WRITE;
 /*!40000 ALTER TABLE `cms_article` DISABLE KEYS */;
-INSERT INTO `cms_article` VALUES (1,'',NULL,'f,','','/1/1.html','',0,1),(2,'',NULL,'f,','','/1/2.html','',0,1),(3,'',NULL,'f,','','/1/3.html','',0,1),(4,'杭州和越','<p><strong>公司名称</strong>：<span style=\"text-decoration: underline;\"><em>杭州和越科技有限公司</em></span></p>','','杭州和越','/2/index.html','',0,1),(8,'杭州和越','<p><span style=\"font-size: 20px;\">中国</span><strong>·</strong><span style=\"font-size: 14px;\">杭州</span></p><p><span style=\"font-size: 14px;\"><img src=\"/upload/editor/1/1464580378837.jpg\" title=\"1464580378837.jpg\" alt=\"hz.jpg\"/></span></p>','','杭州和越','/5/index.html','',0,1),(9,'杭州和越','<ul style=\"margin-right: 1.5em; margin-bottom: 1.5em; margin-left: 1.5em; padding: 0px; border: 0px; font-size: 12px; font-family: &#39;Helvetica Neue&#39;, Helvetica, Arial, sans-serif; vertical-align: baseline; color: rgb(17, 17, 17); line-height: 18px; white-space: normal; background-color: rgb(255, 255, 255);\" class=\" list-paddingleft-2\"><li><p>Java 是一项用于开发应用程序的技术，可以让 Web 变得更有意思和更实用。 Java 与 javascript 并不相同，后者是一种用于创建 Web 页的简单技术，只能在浏览器中运行。</p></li><li><p>使用 Java 可以玩游戏、上载照片、联机聊天以及参与虚拟体验，并能够使用联机培训、网上银行和互动地图等服务。如果没有安装 Java，则许多应用程序和网站都无法工作。</p></li><li><p>默认情况下，Java 将自动通知您有新的更新可供安装。&nbsp;<strong>为确保软件最新和计算机安全，请您务必接受并安装更新。</strong>&nbsp;如果您在 Windows 计算机上收到了更新 Java 的通知但您记得从未下载或安装它，则有可能是 Java 已经随您的新计算机预先加载。</p></li></ul><p><br/></p>','','杭州和越','/6/9.html','Java ',0,1),(10,'杭州和越','<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Android是一种基于Linux的自由及开放源代码的操作系统，主要使用于移动设备，如智能手机和平板电脑，由Google公司和开放手机联盟领导及开发。尚未有统一中文名称，中国大陆地区较多人使用“安卓”或“安致”。Android操作系统最初由Andy Rubin开发，主要支持手机。2005年8月由Google收购注资。2007年11月，Google与84家硬件制造商、软件开发商及电信营运商组建开放手机联盟共同研发改良Android系统。随后Google以Apache开源许可证的授权方式，发布了Android的源代码。第一部Android智能手机发布于2008年10月。Android逐渐扩展到平板电脑及其他领域上，如电视、数码相机、游戏机等。2011年第一季度，Android在全球的市场份额首次超过塞班系统，跃居全球第一。 2013年的第四季度，Android平台手机的全球市场份额已经达到78.1%. 2013年09月24日谷歌开发的操作系统Android在迎来了5岁生日，全世界采用这款系统的设备数量已经达到10亿台。</p>','','杭州和越','/6/10.html','',0,1),(11,'杭州和越','<header class=\"section section-hero\" data-analytics-section-engagement=\"name:hero\" style=\"position: relative; margin-bottom: -110px; color: rgb(51, 51, 51); font-family: &#39;PingFang SC&#39;, &#39;Helvetica Neue&#39;, Helvetica, STHeitiSC-Light, Arial, sans-serif; line-height: 28.8px; white-space: normal; background-color: rgb(255, 255, 255);\"><h1 class=\"headline-hero-page\" style=\"margin: 0px auto 18px; padding: 0px; line-height: 1.06667; letter-spacing: 0px; font-size: 60px; font-weight: 200; text-align: center; font-family: PingHei, &#39;Helvetica Neue&#39;, Helvetica, STHeitiSC-Light, Arial, sans-serif; width: 646px;\">先进的移动操作系统</h1><p class=\"intro\" style=\"margin: 0px auto 13px; padding: 0px; font-size: 22px; line-height: 1.54545; text-align: center; font-family: PingHei, &#39;PingFang SC&#39;, &#39;Helvetica Neue&#39;, Helvetica, STHeitiSC-Light, Arial, sans-serif; width: 750px;\">iOS 9 简单易用的界面、出色的功能和源自核心的安全性，令其成为 iPhone、iPad 和 iPod&nbsp;touch 的强大基础。它看起来赏心悦目，用起来同样得心应手。甚至连简单的日常任务，做起来也更引人入胜。由于 iOS 9 是为充分发挥 Apple 硬件蕴含的先进技术而设计，你的设备将始终保持卓越。</p><p></p><figure class=\"image image-what-is-hero\" style=\"margin: -92px 0px 60px -1050.5px; padding: 0px; height: 954px; width: 2101px; position: relative; left: 490px; background-image: url(&quot;http://images.apple.com/cn/ios/images/what-is/hero_large_2x.png&quot;); background-size: 2101px 954px; background-repeat: no-repeat;\"></figure><p></p></header><p><section class=\"section section-interface alternate\" data-analytics-section-engagement=\"name:interface\" style=\"position: relative; color: rgb(51, 51, 51); font-family: &#39;PingFang SC&#39;, &#39;Helvetica Neue&#39;, Helvetica, STHeitiSC-Light, Arial, sans-serif; line-height: 28.8px; white-space: normal; background-color: rgb(250, 250, 250);\"></section></p><p><br/></p>','','杭州和越','/6/11.html','',0,1),(12,'杭州和越','<p>后台、前端、移动端（<span style=\"font-family: &#39;comic sans ms&#39;;\"><em>Android/iOS</em></span>）</p>','','杭州和越','/3/index.html','',0,1),(13,'','<p>休假（请假）管理</p>','','','/4/13.html','',0,1),(14,'','<p>资管辅助</p>','','','/4/14.html','',0,1),(15,'','<p>内控</p>','','','/4/15.html','',0,1),(16,'','<p>耗材管理、人员薪酬管理</p>','','','/4/16.html','',0,1),(17,'','<p>耗材管理</p>','','','/4/17.html','',0,1),(18,'','<p>家宽、政企、任务单、驻地网</p>','','','/4/18.html','',0,1),(19,'',NULL,'','','/7/19.html','',0,1),(20,'',NULL,'','','/7/20.html','',0,1);
+INSERT INTO `cms_article` VALUES (1,'',NULL,'f,','样例模板','/1/1.html','',0,1),(2,'',NULL,'f,','模板样例','/1/2.html','',0,1),(3,'',NULL,'f,','模板样例','/1/3.html','',0,1),(4,'','<p><strong>&nbsp; &nbsp; &nbsp; &nbsp; 此处为关于我们的详情页面的详细介绍，可以在此处按自定样式和内容设置，对应的样式、图片等等<span style=\"color: rgb(192, 0, 0);\">会</span><span style=\"color: rgb(255, 0, 0);\">在</span><span style=\"color: rgb(255, 192, 0);\">详</span><span style=\"color: rgb(146, 208, 80);\">情</span><span style=\"color: rgb(0, 176, 80);\">页</span><span style=\"color: rgb(0, 176, 240);\">面</span><span style=\"color: rgb(0, 112, 192);\">对</span><em>应</em></strong><span style=\"text-decoration: underline;\"><strong>展</strong></span><span style=\"font-size: 24px;\"><strong>示</strong></span></p><p><span style=\"text-decoration: underline;\"><em><br/></em></span></p><p><span style=\"text-decoration: none;\">另外，此条目的文章缩略图也首页公司简介的图片，大小700x450</span><span style=\"text-decoration: underline;\"><em><br/></em></span><br/></p>','','样例模板','/2/index.html','',0,1),(8,'','<p><span style=\"font-size: 20px;\">中国</span><strong>·</strong><span style=\"font-size: 14px;\">杭州</span></p><p><span style=\"font-size: 14px;\"><br/></span></p><p><span style=\"font-size: 14px;\"><br/></span></p><p><span style=\"font-size: 14px;\">此处会在联系我们页面地图的右侧显示</span></p>','','模板样例','/5/index.html','',0,1),(9,'','<p>此处为新闻一的详情，会按照编辑的样式在新闻详情页展示</p><p><br/></p><p>此条目的文章缩略图会在新闻列表页面展示，大小600x300</p><p><br/></p>','','模板样例','/6/9.html','',0,1),(10,'','<p>&nbsp;此处为新闻二的详情，会按照编辑的样式在新闻详情页展示</p><p style=\"white-space: normal;\"><br/></p><p style=\"white-space: normal;\">此条目的文章缩略图会在新闻列表页面展示，大小600x300</p><p><br/></p>','','样例模板','/6/10.html','',0,1),(11,'','<p style=\"white-space: normal;\">此处为新闻三的详情，会按照编辑的样式在新闻详情页展示</p><p style=\"white-space: normal;\"><br/></p><p style=\"white-space: normal;\">此条目的文章缩略图会在新闻列表页面展示，大小600x300</p><p><br/></p>','','样例模板','/6/11.html','',0,1),(12,'','<p>后台、前端、移动端（<span style=\"font-family: &#39;comic sans ms&#39;;\"><em>Android/iOS</em></span>）</p><p><br/></p><p>此处是服务和管理详情页面展示的东西，会按照此处输入的样式对应展示</p>','','模板样例','/3/index.html','',0,1),(13,'','<p>此处会将产品一的详细内容在详情页展示</p><p><br/></p><p>注意：此条目的文章缩略图会在首页、产品列表页展示，大小700x450</p>','','样例模板','/4/13.html','',0,1),(14,'','<p>此处会将产品二的详细内容在详情页展示</p><p><br/></p><p>注意：此条目的文章缩略图会在首页、产品列表页展示，大小700x450</p>','','样例模板','/4/14.html','',0,1),(15,'','<p>此处会将产品三的详细内容在详情页展示</p><p><br/></p><p>注意：此条目的文章缩略图会在首页、产品列表页展示，大小700x450</p>','','样例模板','/4/15.html','',0,1),(16,'','<p>此处会将产品四的详细内容在详情页展示</p><p><br/></p><p>注意：此条目的文章缩略图会在首页、产品列表页展示，大小700x450</p>','','','/4/16.html','',0,1),(17,'','<p>此处会将产品五的详细内容在详情页展示</p><p><br/></p><p>注意：此条目的文章缩略图会在首页、产品列表页展示，大小700x450</p>','','样例模板','/4/17.html','',0,1),(18,'','<p>此处会将产品六的详细内容在详情页展示</p><p><br/></p><p>注意：此条目的文章缩略图会在首页、产品列表页展示，大小700x450</p>','','样例模板','/4/18.html','',0,1),(19,'','<p>此条目只需要填写两项，一个是文章缩略图为了首页展示，大小500x175，一个是描述为对应的网址，方便点击跳转</p>','','','/7/19.html','',0,1),(20,'','<p>此条目只需要填写两项，一个是文章缩略图为了首页展示，大小500x175，一个是描述为对应的网址，方便点击跳转</p>','','','/7/20.html','',0,1),(21,'','<p>成员在关于我们页面展示，大小700x450</p>','','模板样例','/8/21.html','',0,1),(22,'','<p>伙伴缩略图在关于我们页面展示，大小500x300</p>','','模板样例','/9/22.html','',0,1);
 /*!40000 ALTER TABLE `cms_article` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -238,6 +238,7 @@ CREATE TABLE `cms_case_1` (
 
 LOCK TABLES `cms_case_1` WRITE;
 /*!40000 ALTER TABLE `cms_case_1` DISABLE KEYS */;
+INSERT INTO `cms_case_1` VALUES (13,'自主研发'),(14,'其他'),(15,NULL),(16,NULL),(17,NULL),(18,NULL);
 /*!40000 ALTER TABLE `cms_case_1` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -269,7 +270,7 @@ CREATE TABLE `cms_column` (
 
 LOCK TABLES `cms_column` WRITE;
 /*!40000 ALTER TABLE `cms_column` DISABLE KEYS */;
-INSERT INTO `cms_column` VALUES (1,'','',1,'about.htm','about.htm',NULL,1,'/1',0),(2,'','',2,'about.htm','about.htm',NULL,1,'/2',0),(3,'','',2,'about.htm','about.htm',NULL,1,'/3',0),(4,'','',1,'detail.htm','list.htm',NULL,1,'/4',0),(5,'','',2,'about.htm','about.htm',NULL,1,'/5',0),(6,'','',1,'detail.htm','list.htm',NULL,1,'/6',0),(7,'','',1,'detail.htm','list.htm',NULL,1,'/7',0);
+INSERT INTO `cms_column` VALUES (1,'','此处为固定设置，编号（ID）必须要为1，首页轮播图片取自此模块',1,'detail.htm','list.htm',NULL,1,'/1',0),(2,'','此处为固定设置，编号（ID）必须要为2，首页公司简介和关于我们的公司页面详情取自此栏目',2,'about.htm','about.htm',NULL,1,'/2',0),(3,'','此处为固定设置，编号（ID）必须要为3，服务和管理页面详情取自此栏目',2,'detail.htm','list.htm',NULL,1,'/3',0),(4,'','此处为固定设置，编号（ID）必须要为4，首页公司产品展示和产品列表页面、详情页面取自此栏目',1,'case.htm','cases.htm',NULL,1,'/4',1),(5,'','此处为固定设置，编号（ID）必须要为5，联系我们详情页面取自此栏目',2,'contact.htm','about.htm',NULL,1,'/5',0),(6,'','此处为固定设置，编号（ID）必须要为6，首页新闻提示和新闻中心列表、详情取自此模块',1,'news.htm','newses.htm',NULL,1,'/6',0),(7,'','此处为固定设置，编号（ID）必须要为7，首页友情链接取自此模块',1,'detail.htm','list.htm',NULL,1,'/7',0),(8,'','此处为固定设置，编号（ID）必须要为7，关于我们的公司团队信息取自此栏目',1,'detail.htm','list.htm',NULL,1,'/8',0),(9,'','此处为固定设置，编号（ID）必须要为8，关于我们的公司伙伴信息取自此栏目',1,'detail.htm','list.htm',NULL,1,'/9',0);
 /*!40000 ALTER TABLE `cms_column` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -526,7 +527,7 @@ CREATE TABLE `model` (
 
 LOCK TABLES `model` WRITE;
 /*!40000 ALTER TABLE `model` DISABLE KEYS */;
-INSERT INTO `model` VALUES (1,'内容管理','02000000',0,'','2016-05-27 11:27:48','&#xe77a;',0,NULL,NULL),(2,'栏目管理','02990000',1,'/manager/cms/column/list.do','2016-05-27 11:27:48','',0,NULL,NULL),(3,'文章管理','02980000',1,'/manager/cms/article/index.do','2016-05-27 11:27:48','',0,NULL,NULL),(4,'会员中心','07000000',0,'','2016-05-27 11:27:48','&#xe6b6;',0,NULL,1),(5,'用户管理','07020100',4,'/manager/people/user/list.do','2016-05-27 11:27:48','',0,NULL,1),(6,'权限管理','01000000',0,'','2016-05-27 11:27:48','&#xe950;',0,NULL,NULL),(7,'管理员管理','01020000',6,'/manager/manager/queryList.do','2016-05-27 11:27:48','',0,NULL,NULL),(8,'角色管理','01010000',6,'/manager/role/queryList.do','2016-05-27 11:27:48','',0,NULL,NULL),(9,'系统管理','12000000',0,'','2016-05-27 11:27:48','&#xe71f;',0,NULL,NULL),(10,'应用设置','12010000',9,'/manager/app/-1/edit.do','2016-05-27 11:27:48','',0,NULL,NULL),(11,'自定义模型','02060000',9,'/manager/mdiy/contentModel/list.do','2016-05-27 11:27:48','',0,NULL,NULL),(12,'自定义搜索','02050000',9,'/manager/mdiy/search/list.do','2016-05-27 11:27:48','',0,NULL,NULL),(13,'自定义表单','12050000',9,'/manager/mdiy/diyForm/form/list.do','2016-05-27 11:27:48',NULL,NULL,NULL,NULL),(14,'自定义页面','12030100',9,'/manager/mdiy/modeltemplate/list.do','2016-05-27 11:27:48',NULL,0,NULL,NULL),(15,'模板管理','12020000',9,'/manager/template/queryTemplateSkin.do','2016-05-27 11:27:48',NULL,NULL,NULL,NULL),(16,'生成器','11000000',0,'','2016-05-27 11:27:48','&#xe6cc;',0,NULL,NULL),(17,'生成主页','11010000',16,'/manager/cms/generate/index.do','2016-05-27 11:27:48','',0,NULL,NULL),(18,'生成栏目','11020000',16,'/manager/cms/generate/column.do','2016-05-27 11:27:48','',0,NULL,NULL),(19,'生成文章','11030000',16,'/manager/cms/generate/article.do','2016-05-27 11:27:48','',0,NULL,NULL);
+INSERT INTO `model` VALUES (1,'内容管理','02000000',0,'','2016-05-27 11:27:48','&#xe77a;',0,NULL,NULL),(2,'栏目管理','02990000',1,'/manager/cms/column/list.do','2016-05-27 11:27:48','',0,NULL,NULL),(3,'文章管理','02980000',1,'/manager/cms/article/index.do','2016-05-27 11:27:48','',0,NULL,NULL),(4,'会员中心','07000000',0,'','2016-05-27 11:27:48','&#xe6b6;',0,NULL,1),(5,'用户管理','07020100',4,'/manager/people/user/list.do','2016-05-27 11:27:48','',0,NULL,1),(6,'权限管理','01000000',0,'','2016-05-27 11:27:48','&#xe950;',0,NULL,NULL),(7,'管理员管理','01020000',6,'/manager/manager/queryList.do','2016-05-27 11:27:48','',0,NULL,NULL),(8,'角色管理','01010000',6,'/manager/role/queryList.do','2016-05-27 11:27:48','',0,NULL,NULL),(9,'系统管理','12000000',0,'','2016-05-27 11:27:48','&#xe71f;',0,NULL,NULL),(10,'应用设置','12010000',9,'/manager/app/1/edit.do','2016-05-27 11:27:48','',0,NULL,NULL),(11,'自定义模型','02060000',9,'/manager/mdiy/contentModel/list.do','2016-05-27 11:27:48','',0,NULL,NULL),(12,'自定义搜索','02050000',9,'/manager/mdiy/search/list.do','2016-05-27 11:27:48','',0,NULL,NULL),(13,'自定义表单','12050000',9,'/manager/mdiy/diyForm/form/list.do','2016-05-27 11:27:48',NULL,NULL,NULL,NULL),(14,'自定义页面','12030100',9,'/manager/mdiy/modeltemplate/list.do','2016-05-27 11:27:48',NULL,0,NULL,NULL),(15,'模板管理','12020000',9,'/manager/template/queryTemplateSkin.do','2016-05-27 11:27:48',NULL,NULL,NULL,NULL),(16,'生成器','11000000',0,'','2016-05-27 11:27:48','&#xe6cc;',0,NULL,NULL),(17,'生成主页','11010000',16,'/manager/cms/generate/index.do','2016-05-27 11:27:48','',0,NULL,NULL),(18,'生成栏目','11020000',16,'/manager/cms/generate/column.do','2016-05-27 11:27:48','',0,NULL,NULL),(19,'生成文章','11030000',16,'/manager/cms/generate/article.do','2016-05-27 11:27:48','',0,NULL,NULL);
 /*!40000 ALTER TABLE `model` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -752,84 +753,82 @@ LOCK TABLES `system_skin_manager` WRITE;
 UNLOCK TABLES;
 
 --
--- Temporary table structure for view `v_article`
+-- Temporary view structure for view `v_article`
 --
 
 DROP TABLE IF EXISTS `v_article`;
 /*!50001 DROP VIEW IF EXISTS `v_article`*/;
 SET @saved_cs_client     = @@character_set_client;
 SET character_set_client = utf8;
-/*!50001 CREATE TABLE `v_article` (
-  `ARTICLE_BASICID` tinyint NOT NULL,
-  `BASIC_ID` tinyint NOT NULL,
-  `BASIC_CATEGORYID` tinyint NOT NULL,
-  `BASIC_TITLE` tinyint NOT NULL,
-  `BASIC_DESCRIPTION` tinyint NOT NULL,
-  `BASIC_THUMBNAILS` tinyint NOT NULL,
-  `BASIC_HIT` tinyint NOT NULL,
-  `BASIC_DATETIME` tinyint NOT NULL,
-  `BASIC_UPDATETIME` tinyint NOT NULL,
-  `BASIC_PEOPLEID` tinyint NOT NULL,
-  `ARTICLE_AUTHOR` tinyint NOT NULL,
-  `ARTICLE_CONTENT` tinyint NOT NULL,
-  `ARTICLE_TYPE` tinyint NOT NULL,
-  `ARTICLE_SOURCE` tinyint NOT NULL,
-  `ARTICLE_URL` tinyint NOT NULL,
-  `ARTICLE_KEYWORD` tinyint NOT NULL,
-  `ARTICLE_FREEORDER` tinyint NOT NULL,
-  `ARTICLE_WEBID` tinyint NOT NULL,
-  `COLUMN_KEYWORD` tinyint NOT NULL,
-  `COLUMN_DESCRIP` tinyint NOT NULL,
-  `COLUMN_TYPE` tinyint NOT NULL,
-  `COLUMN_URL` tinyint NOT NULL,
-  `COLUMN_LISTURL` tinyint NOT NULL,
-  `COLUMN_TENTMODELID` tinyint NOT NULL,
-  `COLUMN_WEBSITEID` tinyint NOT NULL,
-  `column_path` tinyint NOT NULL,
-  `COLUMN_CONTENTMODELID` tinyint NOT NULL,
-  `CATEGORY_TITLE` tinyint NOT NULL,
-  `CATEGORY_APPID` tinyint NOT NULL,
-  `COLUMN_CATEGORYID` tinyint NOT NULL,
-  `CATEGORY_ID` tinyint NOT NULL,
-  `BASIC_SORT` tinyint NOT NULL
-) ENGINE=MyISAM */;
+/*!50001 CREATE VIEW `v_article` AS SELECT 
+ 1 AS `ARTICLE_BASICID`,
+ 1 AS `BASIC_ID`,
+ 1 AS `BASIC_CATEGORYID`,
+ 1 AS `BASIC_TITLE`,
+ 1 AS `BASIC_DESCRIPTION`,
+ 1 AS `BASIC_THUMBNAILS`,
+ 1 AS `BASIC_HIT`,
+ 1 AS `BASIC_DATETIME`,
+ 1 AS `BASIC_UPDATETIME`,
+ 1 AS `BASIC_PEOPLEID`,
+ 1 AS `ARTICLE_AUTHOR`,
+ 1 AS `ARTICLE_CONTENT`,
+ 1 AS `ARTICLE_TYPE`,
+ 1 AS `ARTICLE_SOURCE`,
+ 1 AS `ARTICLE_URL`,
+ 1 AS `ARTICLE_KEYWORD`,
+ 1 AS `ARTICLE_FREEORDER`,
+ 1 AS `ARTICLE_WEBID`,
+ 1 AS `COLUMN_KEYWORD`,
+ 1 AS `COLUMN_DESCRIP`,
+ 1 AS `COLUMN_TYPE`,
+ 1 AS `COLUMN_URL`,
+ 1 AS `COLUMN_LISTURL`,
+ 1 AS `COLUMN_TENTMODELID`,
+ 1 AS `COLUMN_WEBSITEID`,
+ 1 AS `column_path`,
+ 1 AS `COLUMN_CONTENTMODELID`,
+ 1 AS `CATEGORY_TITLE`,
+ 1 AS `CATEGORY_APPID`,
+ 1 AS `COLUMN_CATEGORYID`,
+ 1 AS `CATEGORY_ID`,
+ 1 AS `BASIC_SORT`*/;
 SET character_set_client = @saved_cs_client;
 
 --
--- Temporary table structure for view `v_people_user`
+-- Temporary view structure for view `v_people_user`
 --
 
 DROP TABLE IF EXISTS `v_people_user`;
 /*!50001 DROP VIEW IF EXISTS `v_people_user`*/;
 SET @saved_cs_client     = @@character_set_client;
 SET character_set_client = utf8;
-/*!50001 CREATE TABLE `v_people_user` (
-  `PEOPLE_ID` tinyint NOT NULL,
-  `PEOPLE_PHONE` tinyint NOT NULL,
-  `PEOPLE_NAME` tinyint NOT NULL,
-  `PEOPLE_PASSWORD` tinyint NOT NULL,
-  `PEOPLE_DATETIME` tinyint NOT NULL,
-  `PEOPLE_APP_ID` tinyint NOT NULL,
-  `PEOPLE_MAIL` tinyint NOT NULL,
-  `PEOPLE_STATE` tinyint NOT NULL,
-  `PEOPLE_CODE` tinyint NOT NULL,
-  `PEOPLE_CODESENDDATE` tinyint NOT NULL,
-  `PEOPLE_PHONECHECK` tinyint NOT NULL,
-  `PEOPLE_MAILLCHECK` tinyint NOT NULL,
-  `PU_PEOPLE_ID` tinyint NOT NULL,
-  `PU_REAL_NAME` tinyint NOT NULL,
-  `PU_ADDRESS` tinyint NOT NULL,
-  `PU_ICON` tinyint NOT NULL,
-  `PU_NICKNAME` tinyint NOT NULL,
-  `PU_SEX` tinyint NOT NULL,
-  `PU_BIRTHDAY` tinyint NOT NULL,
-  `PU_CARD` tinyint NOT NULL,
-  `PU_APP_ID` tinyint NOT NULL
-) ENGINE=MyISAM */;
+/*!50001 CREATE VIEW `v_people_user` AS SELECT 
+ 1 AS `PEOPLE_ID`,
+ 1 AS `PEOPLE_PHONE`,
+ 1 AS `PEOPLE_NAME`,
+ 1 AS `PEOPLE_PASSWORD`,
+ 1 AS `PEOPLE_DATETIME`,
+ 1 AS `PEOPLE_APP_ID`,
+ 1 AS `PEOPLE_MAIL`,
+ 1 AS `PEOPLE_STATE`,
+ 1 AS `PEOPLE_CODE`,
+ 1 AS `PEOPLE_CODESENDDATE`,
+ 1 AS `PEOPLE_PHONECHECK`,
+ 1 AS `PEOPLE_MAILLCHECK`,
+ 1 AS `PU_PEOPLE_ID`,
+ 1 AS `PU_REAL_NAME`,
+ 1 AS `PU_ADDRESS`,
+ 1 AS `PU_ICON`,
+ 1 AS `PU_NICKNAME`,
+ 1 AS `PU_SEX`,
+ 1 AS `PU_BIRTHDAY`,
+ 1 AS `PU_CARD`,
+ 1 AS `PU_APP_ID`*/;
 SET character_set_client = @saved_cs_client;
 
 --
--- Dumping routines for database 'heyueit'
+-- Dumping routines for database 'hy'
 --
 /*!50003 DROP PROCEDURE IF EXISTS `p_getAllChildren` */;
 /*!50003 SET @saved_cs_client      = @@character_set_client */ ;
@@ -870,7 +869,6 @@ DELIMITER ;
 -- Final view structure for view `v_article`
 --
 
-/*!50001 DROP TABLE IF EXISTS `v_article`*/;
 /*!50001 DROP VIEW IF EXISTS `v_article`*/;
 /*!50001 SET @saved_cs_client          = @@character_set_client */;
 /*!50001 SET @saved_cs_results         = @@character_set_results */;
@@ -889,7 +887,6 @@ DELIMITER ;
 -- Final view structure for view `v_people_user`
 --
 
-/*!50001 DROP TABLE IF EXISTS `v_people_user`*/;
 /*!50001 DROP VIEW IF EXISTS `v_people_user`*/;
 /*!50001 SET @saved_cs_client          = @@character_set_client */;
 /*!50001 SET @saved_cs_results         = @@character_set_results */;
@@ -913,4 +910,4 @@ DELIMITER ;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2016-06-07 11:09:07
+-- Dump completed on 2016-06-15 20:13:47

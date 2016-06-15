@@ -23,7 +23,7 @@
           		<@ms.text name="categorySort"  width="200"  label="自定义顺序" title="自定义顺序" size="5"  placeholder="请输入文章顺序" value="${column.categorySort?c?default(0)}"  validation={"data-bv-between":"true","data-bv-between-message":"自定义顺序必须大于0","data-bv-between-min":"0", "data-bv-between-max":"99999999","data-bv-notempty-message":"自定义顺序不能为空"}/>
           		<@ms.textarea name="columnKeyword" width="600" label="${Session.model_title_session?default('栏目')}关键字" wrap="Soft" rows="4" placeholder="${Session.model_title_session?default('栏目')}关键字，有助于搜索"   value="${column.columnKeyword?default('')}" />
           		<@ms.textarea name="columnDescrip" width="600" label="${Session.model_title_session?default('栏目')}描述" wrap="Soft" rows="4" placeholder="${Session.model_title_session?default('栏目')}描述，对${Session.model_title_session?default('栏目')}关键字的扩展"   value="${column.columnDescrip?default('')}" />
-				<#assign columnTypes=[{"id":"1","name":"列表"},{"id":"2","name":"封面"}]>
+				<#assign columnTypes=[{"id":"1","name":"列表"},{"id":"2","name":"单页"}]>
 				<@ms.radio name="columnType" label="${Session.model_title_session?default('栏目')}属性"  list=columnTypes listKey="id" listValue="name" value="${column.columnType?c?default(1)}" />
 				<#if listCm?has_content>
 					<@ms.select name="columnContentModelId" width="200"  list=listCm  listKey="cmId" listValue="cmTipsName"  default="普通文章"  label="${Session.model_title_session?default('栏目')}内容模型"  value=""/>
@@ -81,7 +81,7 @@ $(function(){
 	   		<#if column.columnType ==2 >
 				$("#columnListUrlModel").parents(".form-group").hide();
 				$("#columnListUrlModel").css("disabled",true);
-				$("#columnUrlModel").parent().prev().text("封面模板:");
+				$("#columnUrlModel").parent().prev().text("单页模板:");
 			</#if>
 	   }
 	});	
@@ -90,7 +90,7 @@ $(function(){
 		if($(this).val()== 2){
 			$("#columnListUrlModel").parents(".form-group").hide();
 			$("#columnListUrlModel").css("disabled",true);
-			$("#columnUrlModel").parent().prev().text("封面模板:");
+			$("#columnUrlModel").parent().prev().text("单页模板:");
 		}else if($(this).val()== 1){
 			$("#columnListUrlModel").parents(".form-group").show();
 			$("#columnListUrlModel").css("disabled",false);

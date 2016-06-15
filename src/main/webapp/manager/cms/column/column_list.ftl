@@ -14,7 +14,7 @@
 				<@ms.panelNavBtnAdd title=""/>
 			</@ms.panelNavBtnGroup>
 		</@ms.panelNav>
-		<@ms.table head=["编号",'标题',"属性",'链接地址','列表地址','内容地址','封面地址',"<th style='text-align:center;width:10%;'>操作</th>"] id="tableConterent">
+		<@ms.table head=["编号",'标题',"属性",'链接地址','列表地址','内容地址','单页地址',"<th style='text-align:center;width:10%;'>操作</th>"] id="tableConterent">
 			<#if listColumn?has_content && listColumn!="[]">
 	        	<@ms.treeTable treeId="clumnTree"  style="width:15%" tbodyId="tableConterent" json="${listColumn?default('')}" jsonName="categoryTitle" jsonId="categoryId" jsonPid="categoryCategoryId"/>
 	      	<#else>
