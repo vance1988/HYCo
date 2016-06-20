@@ -247,14 +247,21 @@
 					<include>**/*.properties</include>
 				</includes>
 			</resource>
+			<!-- 以下配置可以让resources文件不打到jar包中 -->
 			<resource>
 				<directory>src/main/resources</directory>
-				<includes>
-					<include>**/*.xml</include>
-					<include>**/*.properties</include>
-				</includes>
+				<excludes>
+                	<exclude>**</exclude>
+                </excludes>
 			</resource>
 		</resources>
+		<!--必须配置测试资源文件，否则测试类无法加载资源文件-->
+        <testResources>
+        	<testResource>
+            	<directory>src/test/resources</directory>
+            	<filtering>true</filtering>
+        	</testResource>
+        </testResources>
 		<plugins>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
@@ -266,11 +273,56 @@
 					<encoding>UTF-8</encoding>
 					<compilerArguments>
 						<verbose />
-						<bootclasspath>${java.home}/lib/rt.jar;${java.home}/lib/jce.jar</bootclasspath>
+						<!-- 两个文件中要中冒号:隔开，如果是windows系统要使用分号,网上说是因为windows和linux环境变量的分隔符分别是分号和冒号;
+						如果不正确，clean打包报错:致命错误: 在类路径或引导类路径中找不到程序包 java.lang -->
+						<bootclasspath>${java.home}/lib/rt.jar:${java.home}/lib/jce.jar</bootclasspath>
 					</compilerArguments>
-
 				</configuration>
 			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-war-plugin</artifactId>
+				<version>2.6</version>
+				<configuration>
+					<!--将类文件打成jar包 -->
+					<archiveClasses>true</archiveClasses>
+					<!--将资源文件打到classes目录下 -->
+					<webResources>
+						<resource>
+							<!--
+								当archiveClasses=true时，resources中的文件资源会被打到jar中；
+								上面上配置文件不包含到jar中，使用以下配置将配置文件打包到classes文件夹
+							-->
+							<directory>src/main/resources</directory>
+							<targetPath>WEB-INF/classes</targetPath>
+							<filtering>true</filtering>
+						</resource>
+					</webResources>
+				</configuration>
+			</plugin>
+		   <!-- 单独打jar包，但是有上面的配置就不需要此配置了，上面会自动将源码打成jar包到war包里面
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-jar-plugin</artifactId>
+				<version>2.4</version>
+				<executions>
+					<execution>
+						<id>my-jar</id>
+						<phase>package</phase>
+						<goals>
+							<goal>jar</goal>
+						</goals>
+						<configuration>
+							<classifier>api</classifier>
+							<excludes>
+								<exclude>**/*.properties</exclude>
+								<exclude>**/*.xml</exclude>
+							</excludes>
+						</configuration>
+					</execution>
+				</executions>
+			</plugin>
+			 -->
 		</plugins>
 		<defaultGoal>compile</defaultGoal>
 	</build>
