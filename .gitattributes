@@ -1,2 +1,4 @@
 *.htm linguist-language=Java
 *.ftl linguist-language=Java
+*.js linguist-language=Java
+*.css linguist-language=Java
